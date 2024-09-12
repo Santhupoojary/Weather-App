@@ -21,12 +21,10 @@ const days = [
   "Saturday",
 ];
 
-// display the day
 const day = new Date();
 const dayName = days[day.getDay()];
 dayEl.textContent = dayName;
 
-// display date
 let month = day.toLocaleString("default", { month: "long" });
 let date = day.getDate();
 let year = day.getFullYear();
@@ -34,11 +32,9 @@ let year = day.getFullYear();
 console.log();
 dateEl.textContent = date + " " + month + " " + year;
 
-// add event
 btnEl.addEventListener("click", (e) => {
   e.preventDefault();
 
-  // check empty value
   if (inputEl.value !== "") {
     const Search = inputEl.value;
     inputEl.value = "";
@@ -59,13 +55,8 @@ async function findLocation(name) {
     console.log(result);
 
     if (result.cod !== "404") {
-      // display image content
       const ImageContent = displayImageContent(result);
-
-      // display right side content
       const rightSide = rightSideContent(result);
-
-      // forecast function
       displayForeCast(result.coord.lat, result.coord.lon);
 
       setTimeout(() => {
@@ -81,7 +72,6 @@ async function findLocation(name) {
   } catch (error) {}
 }
 
-// display image content and temp
 function displayImageContent(data) {
   return `<img src="https://openweathermap.org/img/wn/${
     data.weather[0].icon
@@ -90,7 +80,6 @@ function displayImageContent(data) {
     <h3 class="cloudtxt">${data.weather[0].description}</h3>`;
 }
 
-// display the right side content
 function rightSideContent(result) {
   return `<div class="content">
           <p class="title">NAME</p>
@@ -131,14 +120,12 @@ async function displayForeCast(lat, long) {
   });
 }
 
-// forecast html element data
 function forecast(frContent) {
   const day = new Date(frContent.dt_txt);
   const dayName = days[day.getDay()];
   const splitDay = dayName.split("", 3);
   const joinDay = splitDay.join("");
 
-  // console.log(dayName);
 
   return `<li>
   <img src="https://openweathermap.org/img/wn/${
