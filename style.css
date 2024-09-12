@@ -19,6 +19,13 @@ body {
     height: 100vh;
   }
 
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  grid-gap: 1rem;
+}
+
 .container {
   max-width: 800px;
   width: 100%;
@@ -28,13 +35,7 @@ body {
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.26);
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 3fr 4fr;
-  grid-gap: 1rem;
-}
-
-.img_section {
+.img-section {
   border-radius: 25px;
   background-image: url("../img/bg.jpg");
   background-position: center;
@@ -44,7 +45,7 @@ body {
   transform: scale(1.03) perspective(200px);
 }
 
-.img_section::before {
+.img-section::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -54,43 +55,16 @@ body {
   z-index: -1;
   border-radius: 25px;
 }
-
-.default_info {
-  padding: 1.5rem;
-  text-align: center;
-}
-
-.default_info img {
-  width: 80%;
-  object-fit: cover;
-  margin: 0 auto;
-}
-
-.default_info h2 {
-  font-size: 3rem;
-}
-
-.default_info h3 {
-  font-size: 1.3rem;
-  text-transform: capitalize;
-}
-
-.weather_temp {
-  font-size: 4rem;
-  font-weight: 800;
-}
-
-/* content section */
-.content_section {
+.content-section {
   padding: 1.5rem;
 }
 
-.content_section form {
+.content-section form {
   margin: 1.5rem 0;
   position: relative;
 }
 
-.content_section form input {
+.content-section form input {
   width: 84%;
   outline: none;
   background: transparent;
@@ -102,7 +76,7 @@ body {
   font-size: 1.5rem;
 }
 
-.content_section form button {
+.content-section form button {
   position: absolute;
   top: 0;
   right: 0;
@@ -118,17 +92,17 @@ body {
   cursor: pointer;
 }
 
-.day_info .content {
+.day-info .content {
   display: flex;
   justify-content: space-between;
   padding: 0.4rem 0;
 }
 
-.day_info .content .title {
+.day-info .content .title {
   font-weight: 600;
 }
 
-.list_content ul {
+.list-content ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -137,7 +111,7 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
-.list_content ul li {
+.list-content ul li {
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -146,7 +120,7 @@ body {
   transition: all 0.3s ease-in;
 }
 
-.list_content ul li:hover {
+.list-content ul li:hover {
   transform: scale(1.1);
   background-color: #6cdfdf;
   color: #0e1111;
@@ -154,10 +128,37 @@ body {
   cursor: pointer;
 }
 
-.list_content ul li img {
+.list-content ul li img {
   width: 50%;
   object-fit: cover;
 }
+
+.default-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.default-info img {
+  width: 80%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.default-info h2 {
+  font-size: 3rem;
+}
+
+.default-info h3 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+.weather-temp {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+
 
 .icons {
   opacity: 0;
