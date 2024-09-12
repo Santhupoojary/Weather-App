@@ -35,7 +35,7 @@ body {
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.26);
 }
 
-.img-section {
+.img-sec {
   border-radius: 25px;
   background-image: url("../img/bg.jpg");
   background-position: center;
@@ -45,7 +45,7 @@ body {
   transform: scale(1.03) perspective(200px);
 }
 
-.img-section::before {
+.img-sec::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -55,16 +55,16 @@ body {
   z-index: -1;
   border-radius: 25px;
 }
-.content-section {
+.content-sec {
   padding: 1.5rem;
 }
 
-.content-section form {
+.content-sec form {
   margin: 1.5rem 0;
   position: relative;
 }
 
-.content-section form input {
+.content-sec form input {
   width: 84%;
   outline: none;
   background: transparent;
@@ -76,7 +76,7 @@ body {
   font-size: 1.5rem;
 }
 
-.content-section form button {
+.content-sec form button {
   position: absolute;
   top: 0;
   right: 0;
