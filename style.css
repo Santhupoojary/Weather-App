@@ -175,3 +175,115 @@ body {
     opacity: 1;
   }
 }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .list-content ul li img {
+    width: 40%;
+  }
+
+  .default-info h2 {
+    font-size: 2.5rem;
+  }
+
+  .weather-temp {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    max-width: 600px;
+  }
+
+  .default-info h2 {
+    font-size: 2.3rem;
+  }
+
+  .default-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .weather-temp {
+    font-size: 3rem;
+  }
+
+  .content-sec form input {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+
+  .content-sec form button {
+    font-size: 1rem;
+  }
+
+  .list-content ul li img {
+    width: 35%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+
+  .content-sec form input {
+    font-size: 1.1rem;
+  }
+
+  .weather-temp {
+    font-size: 2.5rem;
+  }
+
+  .default-info h2 {
+    font-size: 2rem;
+  }
+
+  .default-info h3 {
+    font-size: 1rem;
+  }
+
+  .list-content ul li img {
+    width: 30%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .content-sec form input {
+    width: 75%;
+    font-size: 1rem;
+  }
+
+  .content-sec form button {
+    font-size: 0.9rem;
+  }
+
+  .default-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .default-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .weather-temp {
+    font-size: 2rem;
+  }
+
+  .list-content ul li img {
+    width: 25%;
+  }
+}
+
